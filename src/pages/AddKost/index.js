@@ -77,42 +77,38 @@ const AddKost = ({navigation}) => {
         </TouchableOpacity>
         <Gap height={20} />
         <TextInput
-          style={styles.inputText}
           placeholder="Input your kost name"
           value={kostName}
           onChangeText={value => setKostName(value)}
         />
         <Gap height={20} />
         <TextInput
-          style={styles.inputText}
           placeholder="Input your kost address"
           value={address}
           onChangeText={value => setAddress(value)}
         />
         <Gap height={20} />
         <TextInput
-          style={styles.inputText}
           placeholder="Input your kost price"
           value={kostPrice}
           onChangeText={value => setKostPrice(value)}
         />
-        <Gap height={10} />
+        <Gap height={20} />
         <Text style={styles.textBiasa}>Choose your type kost</Text>
         <Gap height={5} />
         <View>
           <RadioForm
             radio_props={radio_props}
-            initial={2}
+            initial={0}
             buttonColor={'white'}
             labelColor={'white'}
-            formHorizontal={false}
+            formHorizontal={true}
             onPress={tipe => {
               setTipe({value: tipe});
             }}
-            selectedLabelColor={'white'}
           />
         </View>
-        <Gap height={5} />
+        <Gap height={20} />
         <Button title="Submit" onPress={onSubmit} />
       </Card>
     </View>
@@ -157,7 +153,7 @@ const styles = StyleSheet.create({
   card: {
     alignSelf: 'center',
     backgroundColor: '#3C3C3C',
-    height: 450,
+    height: 440,
     width: 333,
     top: 270,
     position: 'absolute',
@@ -185,13 +181,5 @@ const styles = StyleSheet.create({
   textBiasa: {
     color: 'white',
     textAlign: 'center',
-  },
-  inputText: {
-    width: 285,
-    height: 45,
-    borderRadius: 5,
-    backgroundColor: 'white',
-    fontSize: 18,
-    paddingHorizontal: 20,
   },
 });

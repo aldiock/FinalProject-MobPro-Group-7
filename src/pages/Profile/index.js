@@ -1,8 +1,6 @@
+import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {ProfilePicture} from '../../assets';
-import {Gap} from '../../components';
 import NavigationBottom from './NavigationBottom';
-import SignOut from './SignOut';
 
 const Profile = () => {
   return (

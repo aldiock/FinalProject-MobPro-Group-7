@@ -7,7 +7,10 @@ const SearchBar = ({...props}) => {
     <View style={styles.container}>
       <View style={styles.search}>
         <TextInput style={styles.input} {...props} />
-        <TouchableOpacity activeOpacity={0.5} style={styles.iconSearch}>
+        <TouchableOpacity
+          activeOpacity={0.5}
+          style={styles.iconSearch}
+          {...props}>
           <IconSearch />
         </TouchableOpacity>
       </View>

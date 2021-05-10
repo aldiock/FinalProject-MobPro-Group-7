@@ -6,11 +6,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {IconBell} from '../../assets';
+import {IconTambahKost} from '../../assets';
 import {Header, KostCard} from '../../components';
 import firebase from '../../config/Firebase';
 
-const HomeScreenMitra = () => {
+const HomeScreenMitra = ({navigation}) => {
   const [dataKost, setDataKost] = useState([]);
 
   useEffect(() => {
@@ -39,8 +39,13 @@ const HomeScreenMitra = () => {
     <View style={styles.screen}>
       <View style={styles.header}>
         <Header greetings="Good afternoon Users," />
-        <TouchableOpacity activeOpacity={0.5}>
-          <IconBell />
+
+        <TouchableOpacity
+          activeOpacity={0.5}
+          onPress={() => {
+            navigation.navigate('AddKost');
+          }}>
+          <IconTambahKost />
         </TouchableOpacity>
       </View>
       <View style={styles.mainContent}>
